@@ -22,13 +22,17 @@ from firstapp import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('users/', views.users), # маршрут по умолчанию
-    re_path(r'^products/$', views.products), # маршрут по умолчанию
-    path('products/<int:productid>/', views.products),
-    path('users/<int:id>/<name>/', views.users),
-    re_path(r'^about', views.about),
-    re_path(r'^contact', views.contact),
-    path("", views.index),
-    path ( 'about' , views. about),
-    path ( 'contact', views. contact),
+    # path('users/', views.users), # маршрут по умолчанию
+    # re_path(r'^products/$', views.products), # маршрут по умолчанию
+    # path('products/<int:productid>/', views.products),
+    # path('users/<int:id>/<name>/', views.users),
+    # re_path(r'^about', views.about),
+    # re_path(r'^contact', views.contact),
+    # path("", views.index),
+    # path ( 'about' , views. about),
+    # path ( 'contact', views. contact),
+    path('', views.index),
+    path('create/', views.create),
+    path('edit/<int:id>/', views.edit),
+    path('delete/<int:id>/', views.delete),
 ]
