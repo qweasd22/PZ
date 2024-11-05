@@ -10,9 +10,10 @@ def users(request, id=1, name='Максим'):
 
 
 def index(request):
-    return HttpResponse("<h2>Глaвнaя</h2>")
+ cat = ["Ноутбуки", "Принтеры", "Сканеры", "Диски", "Шнуры"]
+ return render(request, "index.html", context={"cat": cat})
 def about(request):
-    return HttpResponse("<h2>0 сайте</h2>")
+    return render(request, "about.html")
 def contact(request):
     return HttpResponse("<h2>Koнтaкты</h2>")
 
